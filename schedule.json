@@ -1,0 +1,809 @@
+{
+  "_leiame": "Estrutura de pastas criada no Drive em 30/07/2026 (Trinca > MosaicoNaFATEC, ID 1_r6OVG-R-B8_oEhZrxiC0KVYwCW_jg-x = DRIVE_FOLDER_ID). Cada dia tem as subpastas de categoria; stories ficam em <dia>/stories/<horario>. Basta colocar as midias nas pastas.",
+  "configuracao": {
+    "hashtags_fixas": "#mosaiconafatec #mosaico #fatec #trincamosaico #arteurbana #mosaicart"
+  },
+  "segunda-feira": [
+    {
+      "hora": "08:00",
+      "pasta": "08h00-corte-de-pastilhas",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Corte de pastilhas"
+    },
+    {
+      "hora": "09:00",
+      "pasta": "09h00-organizacao-da-oficina",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Organização da oficina"
+    },
+    {
+      "hora": "10:00",
+      "pasta": "10h00-ferramentas",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Ferramentas"
+    },
+    {
+      "hora": "10:30",
+      "pasta": "stories/10h30-videos-curtos",
+      "tipo": "stories",
+      "grupo": "Stories",
+      "descricao": "Stories: Vídeos curtos"
+    },
+    {
+      "hora": "11:00",
+      "pasta": "11h00-preparacao-de-material",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Preparação de material"
+    },
+    {
+      "hora": "12:00",
+      "pasta": "12h00-alunos-trabalhando",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Alunos trabalhando"
+    },
+    {
+      "hora": "13:00",
+      "pasta": "13h00-evolucao-de-uma-peca",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Evolução de uma peça"
+    },
+    {
+      "hora": "14:00",
+      "pasta": "14h00-etapas-da-construcao",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Etapas da construção"
+    },
+    {
+      "hora": "16:30",
+      "pasta": "stories/16h30-reposts",
+      "tipo": "stories",
+      "grupo": "Stories",
+      "descricao": "Stories: Reposts"
+    },
+    {
+      "hora": "18:00",
+      "pasta": "18h00-trabalho-concluido",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Trabalho concluído"
+    },
+    {
+      "hora": "19:00",
+      "pasta": "19h00-antes-e-depois",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Antes e depois"
+    },
+    {
+      "hora": "20:00",
+      "pasta": "20h00-detalhe-da-obra",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Detalhe da obra"
+    },
+    {
+      "hora": "21:00",
+      "pasta": "21h00-relato-do-projeto",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Relato do projeto"
+    },
+    {
+      "hora": "22:00",
+      "pasta": "22h00-curiosidade-sobre-mosaico",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Curiosidade sobre mosaico"
+    },
+    {
+      "hora": "23:00",
+      "pasta": "23h00-depoimento-de-aluno",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Depoimento de aluno"
+    }
+  ],
+  "_segunda-feira_stories_manuais": [
+    "Enquetes",
+    "Perguntas"
+  ],
+  "terca-feira": [
+    {
+      "hora": "08:00",
+      "pasta": "08h00-bancadas",
+      "tipo": "feed",
+      "grupo": "Visão Geral da Oficina",
+      "descricao": "Visão Geral da Oficina: Bancadas"
+    },
+    {
+      "hora": "09:00",
+      "pasta": "09h00-materiais",
+      "tipo": "feed",
+      "grupo": "Visão Geral da Oficina",
+      "descricao": "Visão Geral da Oficina: Materiais"
+    },
+    {
+      "hora": "10:00",
+      "pasta": "10h00-ambiente",
+      "tipo": "feed",
+      "grupo": "Visão Geral da Oficina",
+      "descricao": "Visão Geral da Oficina: Ambiente"
+    },
+    {
+      "hora": "10:30",
+      "pasta": "stories/10h30-videos-curtos",
+      "tipo": "stories",
+      "grupo": "Stories",
+      "descricao": "Stories: Vídeos curtos"
+    },
+    {
+      "hora": "12:30",
+      "pasta": "12h30-pecas-iniciadas",
+      "tipo": "feed",
+      "grupo": "Trabalhos em andamento",
+      "descricao": "Trabalhos em andamento: Peças iniciadas"
+    },
+    {
+      "hora": "13:30",
+      "pasta": "13h30-alunos-trabalhando",
+      "tipo": "feed",
+      "grupo": "Trabalhos em andamento",
+      "descricao": "Trabalhos em andamento: Alunos trabalhando"
+    },
+    {
+      "hora": "16:30",
+      "pasta": "stories/16h30-reposts",
+      "tipo": "stories",
+      "grupo": "Stories",
+      "descricao": "Stories: Reposts"
+    },
+    {
+      "hora": "18:30",
+      "pasta": "18h30-texturas",
+      "tipo": "feed",
+      "grupo": "Detalhe de uma obra",
+      "descricao": "Detalhe de uma obra: Texturas"
+    },
+    {
+      "hora": "19:30",
+      "pasta": "19h30-encaixes",
+      "tipo": "feed",
+      "grupo": "Detalhe de uma obra",
+      "descricao": "Detalhe de uma obra: Encaixes"
+    },
+    {
+      "hora": "20:30",
+      "pasta": "20h30-cores",
+      "tipo": "feed",
+      "grupo": "Detalhe de uma obra",
+      "descricao": "Detalhe de uma obra: Cores"
+    },
+    {
+      "hora": "21:30",
+      "pasta": "21h30-texto-mais-profundo",
+      "tipo": "feed",
+      "grupo": "Reflexão da semana",
+      "descricao": "Reflexão da semana: Texto mais profundo"
+    },
+    {
+      "hora": "22:30",
+      "pasta": "22h30-foto-contemplativa",
+      "tipo": "feed",
+      "grupo": "Reflexão da semana",
+      "descricao": "Reflexão da semana: Foto contemplativa"
+    }
+  ],
+  "_terca-feira_stories_manuais": [
+    "Enquetes",
+    "Perguntas"
+  ],
+  "quarta-feira": [
+    {
+      "hora": "00:00",
+      "pasta": "00h00-referencias-utilizadas",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Referências utilizadas"
+    },
+    {
+      "hora": "08:00",
+      "pasta": "08h00-escolha-de-cores",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Escolha de cores"
+    },
+    {
+      "hora": "09:00",
+      "pasta": "09h00-separacao-de-materiais",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Separação de materiais"
+    },
+    {
+      "hora": "10:00",
+      "pasta": "10h00-organizacao-das-pastilhas-por-tonalidade",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Organização das pastilhas por tonalidade"
+    },
+    {
+      "hora": "10:30",
+      "pasta": "stories/10h30-conteudo-de-stories-do-dia",
+      "tipo": "stories",
+      "grupo": "Stories",
+      "descricao": "Stories: Conteúdo de stories do dia"
+    },
+    {
+      "hora": "11:00",
+      "pasta": "11h00-estudo-de-composicao",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Estudo de composição"
+    },
+    {
+      "hora": "12:00",
+      "pasta": "12h00-construcao-de-curva",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Construção de curva"
+    },
+    {
+      "hora": "13:00",
+      "pasta": "13h00-tecnicas-de-andamento",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Técnicas de andamento"
+    },
+    {
+      "hora": "14:00",
+      "pasta": "14h00-ajustes-de-encaixe",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Ajustes de encaixe"
+    },
+    {
+      "hora": "15:00",
+      "pasta": "15h00-planejamento-visual-da-peca",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Planejamento visual da peça"
+    },
+    {
+      "hora": "18:00",
+      "pasta": "18h00-detalhes-de-areas-ja-concluidas",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Detalhes de áreas já concluídas"
+    },
+    {
+      "hora": "19:00",
+      "pasta": "19h00-comparacao-entre-diferentes-tecnicas",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Comparação entre diferentes técnicas"
+    },
+    {
+      "hora": "20:00",
+      "pasta": "20h00-texturas-criadas-no-mosaico",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Texturas criadas no mosaico"
+    },
+    {
+      "hora": "21:00",
+      "pasta": "21h00-acabamentos",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Acabamentos"
+    },
+    {
+      "hora": "22:00",
+      "pasta": "22h00-como-surgiu-uma-determinada-peca",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Como surgiu uma determinada peça"
+    },
+    {
+      "hora": "23:00",
+      "pasta": "23h00-inspiracao-artistica",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Inspiração artística"
+    }
+  ],
+  "_quarta-feira_stories_manuais": [
+    "Enquete sobre combinação de cores",
+    "Escolha entre dois detalhes",
+    "Perguntas sobre técnicas"
+  ],
+  "quinta-feira": [
+    {
+      "hora": "00:00",
+      "pasta": "00h00-evolucao-do-atelie",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Evolução do ateliê"
+    },
+    {
+      "hora": "01:00",
+      "pasta": "01h00-curiosidades-sobre-materiais",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Curiosidades sobre materiais"
+    },
+    {
+      "hora": "08:00",
+      "pasta": "08h00-ferramentas-de-trabalho",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Ferramentas de trabalho"
+    },
+    {
+      "hora": "09:00",
+      "pasta": "09h00-tecnicas-em-uso",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Técnicas em uso"
+    },
+    {
+      "hora": "10:00",
+      "pasta": "10h00-organizacao-da-bancada",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Organização da bancada"
+    },
+    {
+      "hora": "10:30",
+      "pasta": "stories/10h30-bastidores-espontaneos",
+      "tipo": "stories",
+      "grupo": "Stories",
+      "descricao": "Stories: Bastidores espontâneos"
+    },
+    {
+      "hora": "11:00",
+      "pasta": "11h00-materiais-recem-chegados",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Materiais recém-chegados"
+    },
+    {
+      "hora": "12:00",
+      "pasta": "12h00-preparacao-de-base",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Preparação de base"
+    },
+    {
+      "hora": "13:00",
+      "pasta": "13h00-transferencia-de-desenho",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Transferência de desenho"
+    },
+    {
+      "hora": "14:00",
+      "pasta": "14h00-inicio-de-novas-pecas",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Início de novas peças"
+    },
+    {
+      "hora": "15:00",
+      "pasta": "15h00-etapas-menos-conhecidas-do-trabalho",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Etapas menos conhecidas do trabalho"
+    },
+    {
+      "hora": "18:00",
+      "pasta": "18h00-bancada-final-do-dia",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Bancada final do dia"
+    },
+    {
+      "hora": "19:00",
+      "pasta": "19h00-progresso-da-semana",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Progresso da semana"
+    },
+    {
+      "hora": "20:00",
+      "pasta": "20h00-detalhes-que-passaram-despercebidos",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Detalhes que passaram despercebidos"
+    },
+    {
+      "hora": "21:00",
+      "pasta": "21h00-comparacao-de-antes-e-depois",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Comparação de antes e depois"
+    },
+    {
+      "hora": "21:30",
+      "pasta": "21h30-relato-do-artista",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Relato do artista"
+    },
+    {
+      "hora": "22:00",
+      "pasta": "22h00-historia-de-uma-ferramenta",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: História de uma ferramenta"
+    },
+    {
+      "hora": "23:00",
+      "pasta": "23h00-como-voce-comecou-no-mosaico",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Como você começou no mosaico"
+    }
+  ],
+  "_quinta-feira_stories_manuais": [
+    "Perguntas sobre o ateliê"
+  ],
+  "sexta-feira": [
+    {
+      "hora": "00:00",
+      "pasta": "00h00-curiosidades",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Curiosidades"
+    },
+    {
+      "hora": "08:00",
+      "pasta": "08h00-organizacao-da-semana-seguinte",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Organização da semana seguinte"
+    },
+    {
+      "hora": "09:00",
+      "pasta": "09h00-materiais-separados",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Materiais separados"
+    },
+    {
+      "hora": "10:00",
+      "pasta": "10h00-planejamento-das-aulas",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Planejamento das aulas"
+    },
+    {
+      "hora": "10:30",
+      "pasta": "stories/10h30-compartilhamento-dos-melhores-momentos",
+      "tipo": "stories",
+      "grupo": "Stories",
+      "descricao": "Stories: Compartilhamento dos melhores momentos"
+    },
+    {
+      "hora": "11:00",
+      "pasta": "11h00-preparacao-de-novos-projetos",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Preparação de novos projetos"
+    },
+    {
+      "hora": "12:00",
+      "pasta": "12h00-retrospectiva-da-semana",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Retrospectiva da semana"
+    },
+    {
+      "hora": "13:00",
+      "pasta": "13h00-compilado-das-atividades",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Compilado das atividades"
+    },
+    {
+      "hora": "14:00",
+      "pasta": "14h00-evolucao-das-turmas",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Evolução das turmas"
+    },
+    {
+      "hora": "15:00",
+      "pasta": "15h00-melhores-momentos",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Melhores momentos"
+    },
+    {
+      "hora": "18:00",
+      "pasta": "18h00-destaques-da-semana",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Destaques da semana"
+    },
+    {
+      "hora": "19:00",
+      "pasta": "19h00-obras-dos-alunos",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Obras dos alunos"
+    },
+    {
+      "hora": "20:00",
+      "pasta": "20h00-resultados-coletivos",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Resultados coletivos"
+    },
+    {
+      "hora": "21:00",
+      "pasta": "21h00-pecas-concluidas",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Peças concluídas"
+    },
+    {
+      "hora": "22:00",
+      "pasta": "22h00-impacto-da-oficina",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Impacto da oficina"
+    },
+    {
+      "hora": "23:00",
+      "pasta": "23h00-bastidores-da-fatec-e-da-oficina",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Bastidores da Fatec e da oficina"
+    }
+  ],
+  "_sexta-feira_stories_manuais": [
+    "Quiz sobre mosaico",
+    "Perguntas para a próxima semana"
+  ],
+  "sabado": [
+    {
+      "hora": "08:00",
+      "pasta": "08h00-processos-criativos",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Processos criativos"
+    },
+    {
+      "hora": "09:00",
+      "pasta": "09h00-estudos",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Estudos"
+    },
+    {
+      "hora": "10:00",
+      "pasta": "10h00-referencias-visuais",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Referências visuais"
+    },
+    {
+      "hora": "10:30",
+      "pasta": "stories/10h30-curiosidades-artisticas",
+      "tipo": "stories",
+      "grupo": "Stories",
+      "descricao": "Stories: Curiosidades artísticas"
+    },
+    {
+      "hora": "11:00",
+      "pasta": "11h00-desenvolvimento-de-novas-ideias",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Desenvolvimento de novas ideias"
+    },
+    {
+      "hora": "12:00",
+      "pasta": "12h00-criacao-autoral",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Criação autoral"
+    },
+    {
+      "hora": "13:00",
+      "pasta": "13h00-experimentacao-de-tecnicas",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Experimentação de técnicas"
+    },
+    {
+      "hora": "14:00",
+      "pasta": "14h00-testes-de-materiais",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Testes de materiais"
+    },
+    {
+      "hora": "15:00",
+      "pasta": "15h00-novas-composicoes",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Novas composições"
+    },
+    {
+      "hora": "16:30",
+      "pasta": "stories/16h30-bastidores-da-criacao",
+      "tipo": "stories",
+      "grupo": "Stories",
+      "descricao": "Stories: Bastidores da criação"
+    },
+    {
+      "hora": "18:00",
+      "pasta": "18h00-obras-concluidas",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Obras concluídas"
+    },
+    {
+      "hora": "19:00",
+      "pasta": "19h00-detalhes-artisticos",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Detalhes artísticos"
+    },
+    {
+      "hora": "20:00",
+      "pasta": "20h00-fotografia-profissional-das-pecas",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Fotografia profissional das peças"
+    },
+    {
+      "hora": "21:00",
+      "pasta": "21h00-trabalhos-autorais",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Trabalhos autorais"
+    },
+    {
+      "hora": "22:00",
+      "pasta": "22h00-processo-criativo",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Processo criativo"
+    },
+    {
+      "hora": "23:00",
+      "pasta": "23h00-inspiracoes-de-artista",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Inspirações de artista"
+    }
+  ],
+  "_sabado_stories_manuais": [
+    "Caixa de perguntas sobre mosaico"
+  ],
+  "domingo": [
+    {
+      "hora": "00:00",
+      "pasta": "00h00-solucoes-criadas-durante-a-semana",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Soluções criadas durante a semana"
+    },
+    {
+      "hora": "08:00",
+      "pasta": "08h00-comeco-do-dia",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Começo do dia"
+    },
+    {
+      "hora": "09:00",
+      "pasta": "09h00-planejamento-para-finalizar-etapas",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Planejamento para finalizar etapas"
+    },
+    {
+      "hora": "10:00",
+      "pasta": "10h00-organizacao-para-a-aula",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Organização para a aula"
+    },
+    {
+      "hora": "10:30",
+      "pasta": "stories/10h30-bastidores-do-encerramento-da-aula",
+      "tipo": "stories",
+      "grupo": "Stories",
+      "descricao": "Stories: Bastidores do encerramento da aula"
+    },
+    {
+      "hora": "11:00",
+      "pasta": "11h00-separacao-de-materiais-finais",
+      "tipo": "feed",
+      "grupo": "Bastidor",
+      "descricao": "Bastidor: Separação de materiais finais"
+    },
+    {
+      "hora": "12:00",
+      "pasta": "12h00-ultimos-ajustes",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Últimos ajustes"
+    },
+    {
+      "hora": "13:00",
+      "pasta": "13h00-correcoes",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Correções"
+    },
+    {
+      "hora": "14:00",
+      "pasta": "14h00-fechamento-de-areas-importantes",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Fechamento de áreas importantes"
+    },
+    {
+      "hora": "15:00",
+      "pasta": "15h00-desenvolvimento-dos-alunos",
+      "tipo": "feed",
+      "grupo": "Processo",
+      "descricao": "Processo: Desenvolvimento dos alunos"
+    },
+    {
+      "hora": "18:00",
+      "pasta": "18h00-antes-e-depois",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Antes e depois"
+    },
+    {
+      "hora": "19:00",
+      "pasta": "19h00-evolucao-da-semana",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Evolução da semana"
+    },
+    {
+      "hora": "20:00",
+      "pasta": "20h00-comparativo-entre-etapas",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Comparativo entre etapas"
+    },
+    {
+      "hora": "21:00",
+      "pasta": "21h00-trabalhos-finalizados",
+      "tipo": "feed",
+      "grupo": "Resultado",
+      "descricao": "Resultado: Trabalhos finalizados"
+    },
+    {
+      "hora": "22:00",
+      "pasta": "22h00-aprendizados-da-semana",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Aprendizados da semana"
+    },
+    {
+      "hora": "23:00",
+      "pasta": "23h00-desafios-encontrados",
+      "tipo": "feed",
+      "grupo": "História",
+      "descricao": "História: Desafios encontrados"
+    }
+  ],
+  "_domingo_stories_manuais": [
+    "Votação das obras detalhadas"
+  ]
+}
