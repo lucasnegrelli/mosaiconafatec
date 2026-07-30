@@ -1,0 +1,50 @@
+name: Postagem Automatica - Mosaico na FATEC
+
+on:
+  schedule:
+    # Roda a cada 15 minutos. O script decide se ha algo para postar
+    # naquele horario, consultando o schedule.json. Cron do GitHub e UTC.
+    - cron: "*/15 * * * *"
+
+  # Permite rodar manualmente pela aba "Actions", passando dia/hora de teste.
+  workflow_dispatch:
+    inputs:
+      dia:
+        description: "Dia da semana para teste (ex: segunda-feira)"
+        required: false
+        default: ""
+      hora:
+        description: "Horario para teste (ex: 08:00)"
+        required: false
+        default: ""
+
+jobs:
+  postar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout do repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Rodar o script de postagem
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_BUSINESS_ID: ${{ secrets.INSTAGRAM_BUSINESS_ID }}
+          DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
+          GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
+          CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+          DAY_OVERRIDE: ${{ github.event.inputs.dia }}
+          HOUR_OVERRIDE: ${{ github.event.inputs.hora }}
+        run: python main.py
