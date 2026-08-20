@@ -22,6 +22,14 @@ from googleapiclient.discovery import build
 from google.oauth2 import service_account
 from googleapiclient.http import MediaIoBaseDownload
 
+import imaging  # módulo local de tratamento de imagem
+
+
+def load_config(path="config.json"):
+    """Carrega a identidade do negócio (nome, voz, branding, formatos)."""
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
 
 # ─────────────────────────────────────────────────────────────
 # CONFIGURAÇÃO (via variáveis de ambiente / GitHub Secrets)
@@ -66,7 +74,8 @@ def get_drive_service():
 def find_folder(drive, parent_id, name):
     """Busca uma pasta pelo nome dentro de um diretório pai.
 
-    Aceita caminhos aninhados com '/', ex: 'stories/10h30-videos-curtos'.
+    Aceita caminhos aninhados separados por '/', necessário para os slots de
+    stories, que no schedule.json vêm como 'stories/10h30-videos-curtos'.
     """
     current = {"id": parent_id, "name": ""}
     for part in name.split("/"):
@@ -176,29 +185,55 @@ def delete_from_cloudinary(public_id, is_video=False):
 # CLAUDE AI — ANÁLISE VISUAL E GERAÇÃO DE LEGENDA
 # ─────────────────────────────────────────────────────────────
 
-def generate_caption_with_image(image_bytes, category_desc, post_type, hashtags_fixas):
-    """Analisa a imagem com Claude Vision e gera legenda personalizada."""
+def _build_prompt(config, category_desc, post_type, com_imagem):
+    """Monta o prompt da legenda a partir do config.json do negócio.
+    É aqui que a automação deixa de ser 'do mosaico' e passa a servir
+    qualquer nicho: tudo vem do config, nada fica cravado no código."""
+    neg = config["negocio"]
+    voz = config["voz"]
+    hashtags_fixas = config["hashtags_fixas"]
+    max_extras = config.get("max_hashtags_extras", 10)
+
+    assinatura = voz.get("assinatura", "").strip()
+    extra = voz.get("instrucoes_extra", "").strip()
+
+    abertura = (
+        f'Você é o social media de "{neg["nome"]}" ({neg["handle"]}) — '
+        f'{neg["nicho"]}, criado por {neg["criador"]}. '
+        f'O público é {neg.get("publico", "o público do negócio")}.'
+    )
+    acao = "Analise a imagem e crie" if com_imagem else "Crie"
+
+    linhas = [
+        abertura,
+        "",
+        f"{acao} uma legenda para o Instagram.",
+        "",
+        f"Contexto da categoria: {category_desc}",
+        f"Tipo de post: {post_type}",
+        f"Hashtags fixas que DEVEM aparecer no final: {hashtags_fixas}",
+        "",
+        "Diretrizes:",
+        f"- Idioma: {voz['idioma']}",
+        f"- Tom: {voz['tom']}",
+        f"- Emojis: {voz['uso_emojis']}",
+        "- Inclua uma chamada para ação natural",
+        f"- Máximo de {voz.get('tamanho_max_caracteres', 2000)} caracteres",
+        f"- Finalize com as hashtags fixas + até {max_extras} hashtags relevantes ao conteúdo",
+    ]
+    if assinatura:
+        linhas.append(f"- Inclua esta assinatura ao final (antes das hashtags): {assinatura}")
+    if extra:
+        linhas.append(f"- {extra}")
+    linhas += ["", "Responda APENAS com a legenda pronta, sem comentários adicionais."]
+    return "\n".join(linhas)
+
+
+def generate_caption_with_image(image_bytes, category_desc, post_type, config):
+    """Analisa a imagem com Claude Vision e gera legenda personalizada pelo config."""
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
     image_b64 = base64.b64encode(image_bytes).decode("utf-8")
-
-    prompt = f"""Você é o social media do projeto "Mosaico na FATEC" — um ateliê de mosaico \
-na FATEC São Paulo criado pelo artista Trinca Mosaico.
-
-Analise esta imagem e crie uma legenda para o Instagram.
-
-📌 Contexto da categoria: {category_desc}
-📌 Tipo de post: {post_type}
-📌 Hashtags fixas que DEVEM aparecer no final: {hashtags_fixas}
-
-Diretrizes para a legenda:
-- Português brasileiro, tom caloroso e inspirador
-- Conecte arte, educação e comunidade
-- Use emojis com moderação (2 a 4 no máximo)
-- Inclua uma chamada para ação natural
-- Máximo de 2.000 caracteres no total
-- Finalize com as hashtags fixas + adicione até 10 hashtags relevantes ao conteúdo
-
-Responda APENAS com a legenda pronta, sem comentários adicionais."""
+    prompt = _build_prompt(config, category_desc, post_type, com_imagem=True)
 
     response = client.messages.create(
         model="claude-haiku-4-5-20251001",
@@ -223,27 +258,10 @@ Responda APENAS com a legenda pronta, sem comentários adicionais."""
     return response.content[0].text
 
 
-def generate_caption_text_only(category_desc, post_type, hashtags_fixas):
+def generate_caption_text_only(category_desc, post_type, config):
     """Gera legenda baseada apenas na descrição da categoria (para vídeos)."""
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-
-    prompt = f"""Você é o social media do projeto "Mosaico na FATEC" — ateliê de mosaico na FATEC São Paulo.
-
-Crie uma legenda para o Instagram.
-
-📌 Contexto da categoria: {category_desc}
-📌 Tipo de post: {post_type}
-📌 Hashtags obrigatórias no final: {hashtags_fixas}
-
-Diretrizes:
-- Português brasileiro, tom caloroso e inspirador
-- Conecte arte, educação e comunidade
-- Emojis com moderação (2 a 4)
-- Chamada para ação natural
-- Máximo 2.000 caracteres
-- Termine com hashtags fixas + até 10 hashtags relevantes
-
-Responda APENAS com a legenda, sem explicações."""
+    prompt = _build_prompt(config, category_desc, post_type, com_imagem=False)
 
     response = client.messages.create(
         model="claude-haiku-4-5-20251001",
@@ -369,15 +387,12 @@ def main():
     print("🎨  MosaicoNaFATEC Auto-Poster")
     print("=" * 55)
 
-    # Carregar agenda
+    # Carregar agenda e identidade do negócio
     with open("schedule.json", "r", encoding="utf-8") as f:
         schedule_data = json.load(f)
 
-    config = schedule_data.get("configuracao", {})
-    hashtags_fixas = config.get(
-        "hashtags_fixas",
-        "#mosaiconafatec #mosaico #fatec #arteurbana"
-    )
+    config = load_config()
+    print(f"🏷️  Negócio: {config['negocio']['nome']} ({config['negocio']['handle']})")
 
     # Determinar dia e hora (modo teste ou produção)
     if DAY_OVERRIDE and HOUR_OVERRIDE:
@@ -419,6 +434,14 @@ def main():
     print("⬇️  Baixando do Drive...")
     buffer = download_to_buffer(drive, media_file["id"])
 
+    is_story = slot["tipo"] == "stories"
+
+    # ── Tratamento de imagem (só para imagens) ────────────────
+    if not is_video:
+        print("🎨 Tratando imagem (formato/JPEG/marca d'água)...")
+        raw = buffer.read()
+        buffer = imaging.process_image(raw, config, is_story=is_story)
+
     # ── Cloudinary ────────────────────────────────────────────
     print("☁️  Enviando para Cloudinary...")
     public_url, cloudinary_id = upload_to_cloudinary(buffer, media_file["name"], is_video)
@@ -428,13 +451,13 @@ def main():
     print("🤖 Gerando legenda com Claude AI...")
     if is_video:
         caption = generate_caption_text_only(
-            slot.get("descricao", ""), slot["tipo"], hashtags_fixas
+            slot.get("descricao", ""), slot["tipo"], config
         )
     else:
         buffer.seek(0)
         image_bytes = buffer.read()
         caption = generate_caption_with_image(
-            image_bytes, slot.get("descricao", ""), slot["tipo"], hashtags_fixas
+            image_bytes, slot.get("descricao", ""), slot["tipo"], config
         )
     print(f"✍️  Legenda: {caption[:120].strip()}...")
 

@@ -1,0 +1,38 @@
+{
+  "_leiame": "Este arquivo define TUDO que é específico deste negócio. Para clonar a automação para outro cliente, basta copiar o projeto e trocar este config.json + o schedule.json + os Secrets + a pasta do Drive. O código (main.py, imaging.py) NÃO precisa ser tocado.",
+
+  "negocio": {
+    "nome": "Mosaico na FATEC",
+    "handle": "@mosaiconafatec",
+    "nicho": "ateliê de mosaico dentro da FATEC São Paulo",
+    "criador": "Trinca Mosaico",
+    "publico": "estudantes, artistas, e a comunidade de arte urbana de São Paulo"
+  },
+
+  "voz": {
+    "idioma": "português brasileiro",
+    "tom": "caloroso e inspirador, conectando arte, educação e comunidade",
+    "uso_emojis": "moderado, de 2 a 4 por legenda",
+    "tamanho_max_caracteres": 2000,
+    "assinatura": "",
+    "instrucoes_extra": "Sempre que fizer sentido, valorize o aspecto educativo e coletivo do ateliê. Evite jargão de marketing."
+  },
+
+  "hashtags_fixas": "#mosaiconafatec #mosaico #fatec #trincamosaico #arteurbana #mosaicart",
+  "max_hashtags_extras": 10,
+
+  "imagem": {
+    "processar": true,
+    "formato_feed": "4:5",
+    "formato_stories": "9:16",
+    "fundo_preenchimento": "blur",
+    "watermark": {
+      "ativo": false,
+      "arquivo": "assets/watermark.png",
+      "posicao": "inferior-direita",
+      "margem_px": 40,
+      "opacidade": 0.6,
+      "largura_relativa": 0.18
+    }
+  }
+}

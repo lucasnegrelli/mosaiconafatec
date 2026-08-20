@@ -1,5 +1,5 @@
 {
-  "_leiame": "Estrutura de pastas criada no Drive em 30/07/2026 (Trinca > MosaicoNaFATEC, ID 1_r6OVG-R-B8_oEhZrxiC0KVYwCW_jg-x = DRIVE_FOLDER_ID). Cada dia tem as subpastas de categoria; stories ficam em <dia>/stories/<horario>. Basta colocar as midias nas pastas.",
+  "_leiame": "Schedule gerado a partir da pauta editorial do Mosaico na FATEC. Ajuste o campo 'pasta' de cada item para bater com o nome real da subpasta no Drive, caso o Trinca tenha nomeado diferente.",
   "configuracao": {
     "hashtags_fixas": "#mosaiconafatec #mosaico #fatec #trincamosaico #arteurbana #mosaicart"
   },
