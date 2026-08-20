@@ -6,110 +6,66 @@
 <title>Guia — Mosaico na FATEC</title>
 <style>
   :root{
-    --terracota:#B5563A;
-    --azul:#2E5A6B;
-    --areia:#F5F0E8;
-    --carvao:#2B2926;
-    --cinza:#6B6560;
-    --borda:#E0D8CC;
-    --verde:#4A7C59;
+    --terracota:#B5563A; --azul:#2E5A6B; --areia:#F5F0E8;
+    --carvao:#2B2926; --cinza:#6B6560; --borda:#E0D8CC; --verde:#4A7C59;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    background:var(--areia);color:var(--carvao);
-    line-height:1.65;font-size:17px;
-  }
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--areia);color:var(--carvao);line-height:1.65;font-size:17px}
   .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
-
-  header{
-    background:var(--terracota);color:#fff;
-    padding:48px 20px;margin-bottom:36px;
-  }
+  header{background:var(--terracota);color:#fff;padding:48px 20px;margin-bottom:36px}
   header .inner{max-width:820px;margin:0 auto}
-  header h1{font-size:2.1rem;line-height:1.2;margin-bottom:8px;font-weight:700}
+  header h1{font-size:2.1rem;line-height:1.2;margin-bottom:8px}
   header p{opacity:.92;font-size:1.05rem}
-
   .mosaico{display:flex;gap:4px;margin-bottom:22px}
   .mosaico span{width:26px;height:26px;border-radius:3px;background:rgba(255,255,255,.35)}
   .mosaico span:nth-child(2){background:rgba(255,255,255,.6)}
   .mosaico span:nth-child(3){background:rgba(255,255,255,.25)}
   .mosaico span:nth-child(4){background:rgba(255,255,255,.75)}
   .mosaico span:nth-child(5){background:rgba(255,255,255,.4)}
-
-  h2{
-    font-size:1.45rem;margin:44px 0 14px;color:var(--azul);
-    padding-bottom:8px;border-bottom:3px solid var(--borda);
-  }
-  h3{font-size:1.12rem;margin:26px 0 8px;color:var(--carvao)}
+  h2{font-size:1.45rem;margin:44px 0 14px;color:var(--azul);
+    padding-bottom:8px;border-bottom:3px solid var(--borda)}
+  h3{font-size:1.12rem;margin:26px 0 8px}
   p{margin-bottom:14px}
-  ul,ol{margin:0 0 16px 22px}
+  ul{margin:0 0 16px 22px}
   li{margin-bottom:7px}
-  strong{color:var(--carvao)}
-
-  .destaque{
-    background:#fff;border-left:5px solid var(--terracota);
+  .destaque{background:#fff;border-left:5px solid var(--terracota);
     padding:20px 24px;margin:24px 0;border-radius:0 8px 8px 0;
-    box-shadow:0 1px 3px rgba(0,0,0,.06);
-  }
+    box-shadow:0 1px 3px rgba(0,0,0,.06)}
   .destaque.aviso{border-left-color:#C9942A;background:#FFFBF2}
   .destaque.ok{border-left-color:var(--verde);background:#F3F8F4}
   .destaque p:last-child{margin-bottom:0}
   .destaque .titulo{font-weight:700;margin-bottom:6px;display:block}
-
-  .passo{
-    display:flex;gap:16px;align-items:flex-start;
-    background:#fff;padding:18px 20px;border-radius:10px;
-    margin-bottom:12px;border:1px solid var(--borda);
-  }
-  .num{
-    flex:0 0 34px;height:34px;border-radius:50%;
-    background:var(--terracota);color:#fff;
-    display:flex;align-items:center;justify-content:center;
-    font-weight:700;font-size:.95rem;
-  }
-  .passo div p:last-child{margin-bottom:0}
-
-  .caminho{
-    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
-    background:#fff;border:1px solid var(--borda);border-radius:8px;
-    padding:16px 20px;margin:18px 0;font-size:.92rem;
-    white-space:pre;overflow-x:auto;line-height:1.8;
-  }
-  .pasta{color:var(--azul);font-weight:600}
-  .coment{color:var(--cinza)}
-
+  .passo{display:flex;gap:18px;align-items:flex-start;background:#fff;
+    padding:22px 24px;border-radius:10px;margin-bottom:14px;
+    border:1px solid var(--borda)}
+  .num{flex:0 0 42px;height:42px;border-radius:50%;background:var(--terracota);
+    color:#fff;display:flex;align-items:center;justify-content:center;
+    font-weight:700;font-size:1.15rem}
+  .passo h3{margin:0 0 6px}
+  .passo p:last-child{margin-bottom:0}
+  .caminho{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    background:var(--azul);color:#fff;border-radius:8px;padding:14px 18px;
+    margin:14px 0;font-size:.95rem;display:inline-block}
   table{width:100%;border-collapse:collapse;margin:20px 0;background:#fff;
     border-radius:8px;overflow:hidden;border:1px solid var(--borda)}
   th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--borda)}
-  th{background:var(--azul);color:#fff;font-weight:600;font-size:.95rem}
+  th{background:var(--azul);color:#fff;font-size:.95rem}
   tr:last-child td{border-bottom:none}
-
   .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
   .card{background:#fff;border:1px solid var(--borda);border-radius:10px;padding:18px 20px}
-  .card h4{font-size:1rem;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .card h4{font-size:1rem;margin-bottom:10px}
   .card.sim h4{color:var(--verde)}
   .card.nao h4{color:var(--terracota)}
   .card ul{margin:0 0 0 18px;font-size:.95rem}
-  .card li{margin-bottom:5px}
-
-  .exemplo{
-    background:#fff;border:1px solid var(--borda);border-left:4px solid var(--azul);
-    padding:14px 18px;margin:10px 0;border-radius:0 8px 8px 0;
-    font-style:italic;color:var(--azul);font-size:.97rem;
-  }
-
-  .rodape{
-    margin-top:56px;padding-top:24px;border-top:2px solid var(--borda);
-    color:var(--cinza);font-size:.92rem;text-align:center;
-  }
-
+  .exemplo{background:#fff;border:1px solid var(--borda);
+    border-left:4px solid var(--azul);padding:14px 18px;margin:10px 0;
+    border-radius:0 8px 8px 0;font-style:italic;color:var(--azul);font-size:.97rem}
+  .rodape{margin-top:56px;padding-top:24px;border-top:2px solid var(--borda);
+    color:var(--cinza);font-size:.92rem;text-align:center}
   @media(max-width:640px){
-    body{font-size:16px}
-    header{padding:36px 20px}
-    header h1{font-size:1.65rem}
-    .cols{grid-template-columns:1fr}
-    .caminho{font-size:.82rem}
+    body{font-size:16px} header{padding:36px 20px}
+    header h1{font-size:1.65rem} .cols{grid-template-columns:1fr}
   }
 </style>
 </head>
@@ -119,16 +75,16 @@
   <div class="inner">
     <div class="mosaico"><span></span><span></span><span></span><span></span><span></span></div>
     <h1>Guia do Mosaico na FATEC</h1>
-    <p>Como funciona o robô que publica no Instagram — e qual é a sua parte nisso</p>
+    <p>O robô publica sozinho. Sua parte são três passos.</p>
   </div>
 </header>
 
 <div class="wrap">
 
   <div class="destaque ok">
-    <span class="titulo">Resumindo tudo em uma frase</span>
-    <p>Você coloca as fotos numa pasta do Google Drive. O robô cuida do resto —
-    escolhe, escreve a legenda, põe as hashtags e publica no horário certo.</p>
+    <span class="titulo">Resumindo</span>
+    <p>Você descarrega o celular no computador. O resto — arrumar as fotos,
+    escrever legenda, escolher horário, publicar — acontece sozinho.</p>
   </div>
 
   <h2>Sua rotina</h2>
@@ -136,74 +92,72 @@
   <div class="passo">
     <div class="num">1</div>
     <div>
-      <p><strong>Abra o Google Drive</strong> e vá em
-      <strong>Meu Drive → Trinca → MosaicoNaFATEC</strong></p>
+      <h3>Ligue o celular no computador</h3>
+      <p>O mesmo cabo de carregar. Se o celular perguntar, escolha
+      <strong>Transferir arquivos</strong> (não "Apenas carregar").</p>
     </div>
   </div>
 
   <div class="passo">
     <div class="num">2</div>
     <div>
-      <p><strong>Escolha o dia da semana</strong> e depois a pasta do assunto.
-      O nome da pasta já diz que horas vai postar e o que é pra ter ali dentro.</p>
+      <h3>Copie tudo para a pasta ENTRADA</h3>
+      <p>No computador, abra:</p>
+      <div class="caminho">Trinca → 02-organizador-midia → entrada</div>
+      <p>Arraste pra dentro tudo que gravou no ateliê. Pode jogar bagunçado,
+      sem escolher nada — é exatamente pra isso que ela serve.</p>
     </div>
   </div>
 
   <div class="passo">
     <div class="num">3</div>
     <div>
-      <p><strong>Arraste a foto pra dentro.</strong> Acabou. Não precisa fazer
-      mais nada — nem renomear, nem avisar ninguém.</p>
+      <h3>Duplo clique em ORGANIZAR</h3>
+      <p>Na mesma pasta tem um arquivo chamado <strong>ORGANIZAR</strong>.
+      Dois cliques nele.</p>
+      <p>Vai abrir uma janela preta com letras — <strong>isso é normal</strong>,
+      é o computador trabalhando. Espere terminar e feche.</p>
     </div>
   </div>
 
-  <h3>Como as pastas são organizadas</h3>
+  <div class="destaque ok">
+    <span class="titulo">Acabou a sua parte</span>
+    <p>O computador endireita as fotos tortas, ajusta o tamanho do Instagram e
+    separa os pedaços bons dos vídeos. Depois o Lucas ou o Claude distribui nos
+    dias, e o robô publica nos horários.</p>
+  </div>
 
-  <div class="caminho"><span class="pasta">MosaicoNaFATEC/</span>
-  <span class="pasta">segunda-feira/</span>
-    <span class="pasta">08h00-corte-de-pastilhas/</span>   <span class="coment">← posta 8h da manhã</span>
-    <span class="pasta">12h00-alunos-trabalhando/</span>   <span class="coment">← posta meio-dia</span>
-    <span class="pasta">18h00-trabalho-concluido/</span>   <span class="coment">← posta 6h da tarde</span>
-    <span class="pasta">stories/</span>                    <span class="coment">← conteúdo de stories</span>
-  <span class="pasta">terca-feira/</span>
-  <span class="coment">... e assim por diante, um pra cada dia</span>
-
-  <span class="pasta">takes-brutos/</span>                 <span class="coment">← na dúvida, joga aqui</span></div>
+  <h2>Perguntas que sempre aparecem</h2>
 
   <div class="destaque">
-    <span class="titulo">Pode colocar várias fotos na mesma pasta?</span>
-    <p>Pode — e é o ideal. O robô posta <strong>uma por vez</strong>, na ordem
-    em que você colocou. Cinco fotos na pasta das 8h da segunda = cinco semanas
-    de post garantido.</p>
-    <p>Num dia que sobrar tempo, tire várias fotos de uma vez e distribua. Isso
-    te adianta semanas.</p>
+    <span class="titulo">Pode mandar muita coisa de uma vez?</span>
+    <p>Pode, e é melhor. Quanto mais material, mais semanas de post garantido.
+    O robô vai usando aos poucos, um por dia.</p>
+  </div>
+
+  <div class="destaque">
+    <span class="titulo">Apaga alguma coisa do meu celular?</span>
+    <p>Não. Nada é apagado, nem no celular nem no computador. Só é copiado.</p>
+  </div>
+
+  <div class="destaque">
+    <span class="titulo">Preciso escolher as fotos boas?</span>
+    <p>Não. Manda tudo. Escolher é justamente a parte que a gente automatizou.</p>
   </div>
 
   <div class="destaque aviso">
-    <span class="titulo">A pasta "postado" — não mexa</span>
-    <p>Depois de publicar, o robô move a foto pra uma pasta chamada
-    <strong>postado</strong>, que ele cria sozinho. É assim que ele sabe o que
-    já foi.</p>
-    <p>Se você tirar uma foto de lá e devolver pra pasta principal, ela vai ser
-    publicada de novo.</p>
+    <span class="titulo">E se aparecer palavra em vermelho na janela preta?</span>
+    <p>Tira uma foto da tela e manda pro Lucas. Não tenta consertar.</p>
   </div>
 
-  <div class="destaque ok">
-    <span class="titulo">Pasta vazia não é problema</span>
-    <p>Se não tiver foto pra algum horário, ele simplesmente pula. Não dá erro,
-    não posta nada errado, não quebra nada.</p>
-  </div>
-
-  <h2>Fotos que funcionam</h2>
-
-  <p>O robô olha a foto pra escrever a legenda. Foto melhor, legenda melhor.</p>
+  <h2>Fotos que funcionam melhor</h2>
 
   <div class="cols">
     <div class="card sim">
       <h4>✓ Ajuda</h4>
       <ul>
         <li>Luz de janela, não de teto</li>
-        <li>Foco no que importa</li>
+        <li>Foco na peça, não no ambiente</li>
         <li>Foto em pé (vertical)</li>
         <li>Mão trabalhando</li>
       </ul>
@@ -219,12 +173,9 @@
     </div>
   </div>
 
-  <p>Não precisa ser fotógrafo. Celular na luz certa já resolve.</p>
-
   <h2>O Claude no dia a dia</h2>
 
-  <p>Além do robô, você tem o Claude no notebook. Serve pra muito mais que
-  Instagram. Fale com ele como falaria com uma pessoa:</p>
+  <p>Serve pra muito mais que Instagram. Fale com ele como falaria com uma pessoa:</p>
 
   <div class="exemplo">"Escreve um orçamento para um painel de mosaico de 2m²,
   prazo de 40 dias, em tons de azul"</div>
@@ -234,62 +185,54 @@
 
   <div class="exemplo">"Deixa esse texto mais claro, sem mudar meu jeito de falar"</div>
 
-  <div class="exemplo">"Qual a diferença entre argamassa e rejunte pra mosaico
-  externo?"</div>
-
-  <p>Se a resposta não ficar boa, diga o que não ficou bom e peça de novo. Isso
-  funciona melhor do que reescrever a pergunta do zero.</p>
+  <p>Se a resposta não ficar boa, diga o que não ficou bom e peça de novo.
+  Funciona melhor do que reescrever a pergunta do zero.</p>
 
   <h2>O que não mexer</h2>
 
   <table>
     <tr><th>O quê</th><th>Por quê</th></tr>
-    <tr><td>A pasta <strong>postado</strong></td><td>É o controle do que já foi publicado</td></tr>
-    <tr><td>O <strong>nome</strong> das pastas</td><td>O robô procura pelo nome exato — trocar tracinho por espaço já quebra</td></tr>
-    <tr><td>O site do <strong>GitHub</strong></td><td>É onde mora o código. Não tem nada lá pra você fazer</td></tr>
+    <tr><td>Pasta <strong>postado</strong></td><td>Controle do que já foi publicado</td></tr>
+    <tr><td>Pasta <strong>para-revisar</strong></td><td>O Claude usa pra trabalhar</td></tr>
+    <tr><td><strong>Nome</strong> das pastas</td><td>O robô procura pelo nome exato</td></tr>
+    <tr><td>Site do <strong>GitHub</strong></td><td>É onde mora o código</td></tr>
   </table>
 
   <h2>Quando der problema</h2>
 
-  <p>Sinais de que tem algo errado:</p>
-
   <ul>
-    <li>Passou <strong>2 dias sem post novo</strong> e as pastas não estão vazias</li>
+    <li>Passou <strong>2 dias sem post novo</strong> e você mandou material</li>
     <li>Apareceu post repetido</li>
-    <li>Legenda saiu estranha ou fora de contexto</li>
+    <li>Legenda saiu estranha</li>
   </ul>
 
   <div class="destaque aviso">
-    <span class="titulo">Chame o Lucas — não tente consertar</span>
-    <p>Não é teimosia: o conserto é do lado técnico, e não tem nada que dê pra
-    fazer pela tela do Drive.</p>
-    <p>Ajuda muito se você disser <strong>desde quando parou</strong>, se
-    <strong>mudou alguma coisa</strong> nos dias anteriores, e mandar um print.</p>
+    <span class="titulo">Chame o Lucas</span>
+    <p>Não é teimosia: o conserto é do lado técnico. Diga desde quando parou,
+    se mudou alguma coisa antes, e mande um print.</p>
   </div>
 
   <div class="destaque aviso">
     <span class="titulo">Prazo importante: 60 dias</span>
-    <p>O acesso do robô ao Instagram vence a cada 60 dias e precisa ser renovado.
-    Quando vence, ele <strong>para de publicar sem avisar</strong> — não dá
-    mensagem de erro, simplesmente para.</p>
-    <p>Combine com o Lucas quem cuida disso e ponha no calendário.</p>
+    <p>O acesso do robô ao Instagram vence a cada 60 dias. Quando vence, ele
+    <strong>para de publicar sem avisar</strong> — não dá erro, simplesmente
+    para. Combine com o Lucas quem cuida disso.</p>
   </div>
 
   <h2>Resumo</h2>
 
   <table>
-    <tr><th>O que</th><th>Onde</th></tr>
-    <tr><td>Colocar fotos</td><td>Drive → Trinca → MosaicoNaFATEC → dia → horário</td></tr>
-    <tr><td>Fotos sem classificar</td><td>pasta <strong>takes-brutos</strong></td></tr>
-    <tr><td>Conversar com o Claude</td><td>app Claude no notebook</td></tr>
+    <tr><th>Passo</th><th>Onde</th></tr>
+    <tr><td>1. Ligar o celular</td><td>cabo → Transferir arquivos</td></tr>
+    <tr><td>2. Copiar fotos e vídeos</td><td>pasta <strong>entrada</strong></td></tr>
+    <tr><td>3. Duplo clique</td><td><strong>ORGANIZAR</strong></td></tr>
+    <tr><td>Conversar</td><td>app Claude</td></tr>
     <tr><td>Deu problema</td><td>chamar o Lucas</td></tr>
   </table>
 
-  <p><strong>Sua parte é a primeira linha.</strong> O resto é detalhe.</p>
+  <p><strong>Três passos.</strong> O resto é com a máquina.</p>
 
-  <div class="rodape">
-    Mosaico na FATEC · guia feito para o Trinca
-  </div>
+  <div class="rodape">Mosaico na FATEC · guia do Trinca</div>
 
 </div>
 </body>
